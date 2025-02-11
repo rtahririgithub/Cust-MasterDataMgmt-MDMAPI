@@ -1,0 +1,4 @@
+integrationTest:
+  routePath: http://paas-node-starter-dv.paas-app-east-np.tsl.telus.com/v1
+message:
+  text: Text DV config messagez

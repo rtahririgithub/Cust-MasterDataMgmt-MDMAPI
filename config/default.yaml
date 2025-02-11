@@ -1,0 +1,20 @@
+info:
+  tag: ${IMAGE_TAG}
+  build:
+    build: ${BUILD_DT}
+server:
+  contextPath: /v1
+logging:
+  prettyPrint: false
+  level: "debug"
+  stringify: true
+  humanReadableUnhandledException: false
+  json: true
+  colorize: false
+  timestamp: true
+security:
+  enabled: true
+  tokenName: telus_atn_token
+  basekeypath: /opt/telus/keystore/rest
+  protectedList:
+    - /greeting

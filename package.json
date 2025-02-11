@@ -1,0 +1,56 @@
+{
+  "name": "party-management",
+  "version": "1.0.0",
+  "description": "Node.js on Openshift",
+  "author": "Gotham Soni<gotham.soni@telus.com>",
+  "cmdbAppID": 19005,
+  "main": "server.js",
+  "jest": {
+    "testRegex": "__tests__/.*.js$",
+    "coverageReporters": [
+      "text",
+      "html"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "jest-junit": {
+    "output": "output/coverage/junit/jest-junit.xml",
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{title}",
+    "ancestorSeparator": " › ",
+    "usePathForSuiteName": "true"
+  },
+  "scripts": {
+    "devstart": "sh ./devstart.sh",
+    "start": "node ./src/server.js",
+    "unittest": "jest --coverage --env=node --coverageDirectory=output/coverage/junit/htmlreport",
+    "integrationtest": "mocha ./integration-test/* --reporter mocha-multi-reporters --reporter-options configFile=./config/integrationtest-config.json --timeout 10000 --exit"
+  },
+  "dependencies": {
+    "@godaddy/terminus": "^1.0.0",
+    "config": "^1.31.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.1",
+    "jest": "^23.2.0",
+    "js-yaml": "^3.12.0",
+    "mocha-multi-reporters": "^1.1.7",
+    "morgan": "^1.9.1",
+    "node-rsa": "^1.0.0",
+    "request": "^2.88.0",
+    "util": "^0.12.1",
+    "winston": "^3.0.0",
+    "x509.js": "^1.0.0",
+    "xml2js": "^0.4.22"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "jest-junit": "^6.2.1",
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.17.0",
+    "nodemon": "^2.0.1",
+    "supertest": "^3.1.0"
+  }
+}

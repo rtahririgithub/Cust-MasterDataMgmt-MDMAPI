@@ -1,0 +1,12 @@
+{
+    "Party": {
+        "mdmConfig": {
+            "urlprefix": "https://telus-devint.mdm.informaticahostednp.com/cmx/cs/orcl-ORSMDMAT/xParty?action=query&filter=",
+            "output": "&depth=6&outputView=xGetPartyView"
+        },
+        "auth": {
+            "username": "readonly",
+            "password": "readonly_mdm"
+        }
+    }
+}

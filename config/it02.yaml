@@ -1,0 +1,2 @@
+integrationTest:
+  routePath: http://paas-node-starter-it02.paas-app-east-np.tsl.telus.com/v1
